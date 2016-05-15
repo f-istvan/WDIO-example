@@ -3,9 +3,12 @@
   "version": "1.0.0",
   "description": "Simple WDIO example",
   "dependencies": {
-    "webdriverio": "^4.0.6",
-    "wdio-junit-reporter": "0.0.2",
-    "wdio-sauce-service": "^0.2.2",
-    "wdio-jasmine-framework": "~0.1"
+  },
+  "devDependencies": {
+    "webdriverio": "^4.0.7",
+    "wdio-selenium-standalone-service": "0.0.3",
+    "cucumber": "^0.10.2",
+    "wdio-cucumber-framework": "0.0.6",
+    "wdio-cucumber-reporter": "0.0.2"
   }
 }

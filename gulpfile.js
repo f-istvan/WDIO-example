@@ -3,7 +3,8 @@
 var gulp = require('gulp'),
     jasmine = require('gulp-jasmine'),
     jshint = require('gulp-jshint'),
-    webdriver = require('gulp-webdriver');
+    map = require('map-stream'),
+    webdriver = require('gulp-webdriver'); 
 
 gulp.task('beforeBuild', ['test', 'jshint']);
 
@@ -18,5 +19,13 @@ gulp.task('test-jasmine', function () {
 });
 
 gulp.task('jshint', function () {
-    return gulp.src('source/**/*.js').pipe(jshint()).pipe(jshint.reporter('default'));
+    var exitOnJshintError = map(function (file, cb) {
+        if (!file.jshint.success) {
+            console.error('JSHint check failed.');
+            process.exit(1);
+        } else {
+            console.log(file.path, 'checked.');
+        }
+    });
+    return gulp.src('source/**/*.js').pipe(jshint()).pipe(jshint.reporter('default')).pipe(exitOnJshintError);
 });

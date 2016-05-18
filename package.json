@@ -13,6 +13,7 @@
     "gulp-jshint": "^2.0.1",
     "gulp-webdriver": "^2.0.1",
     "jshint": "^2.9.2",
+    "map-stream": "0.0.6",
     "wdio-cucumber-framework": "0.0.6",
     "wdio-cucumber-reporter": "0.0.2",
     "wdio-selenium-standalone-service": "0.0.3",

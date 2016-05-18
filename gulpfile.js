@@ -2,7 +2,10 @@
 
 var gulp = require('gulp'),
     jasmine = require('gulp-jasmine'),
-    webdriver = require('gulp-webdriver'); 
+    jshint = require('gulp-jshint'),
+    webdriver = require('gulp-webdriver');
+
+gulp.task('beforeBuild', ['test', 'jshint']);
 
 gulp.task('test', ['test-cucumber', 'test-jasmine']);
 
@@ -12,4 +15,8 @@ gulp.task('test-cucumber', function () {
 
 gulp.task('test-jasmine', function () {
     return gulp.src(['test/specs/*-spec.js']).pipe(jasmine());
+});
+
+gulp.task('jshint', function () {
+    return gulp.src('source/**/*.js').pipe(jshint()).pipe(jshint.reporter('default'));
 });

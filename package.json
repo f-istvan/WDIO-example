@@ -9,6 +9,7 @@
   "devDependencies": {
     "cucumber": "^0.10.2",
     "gulp": "^3.9.1",
+    "gulp-jasmine": "^2.3.0",
     "gulp-webdriver": "^2.0.1",
     "wdio-cucumber-framework": "0.0.6",
     "wdio-cucumber-reporter": "0.0.2",

@@ -11,7 +11,3 @@ function Utils() {
         }
     };
 }
-
-if (exports !== undefined) {
-    exports.Utils = Utils;
-}

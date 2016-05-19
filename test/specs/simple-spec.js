@@ -1,6 +1,8 @@
 'use strict';
 
-var util = require('../../source/simple-functions.js').Utils();
+//=require ../../source/simple-functions.js
+
+var util = Utils();
 
 describe('Test utils', function () {
     describe('sign function', function () {

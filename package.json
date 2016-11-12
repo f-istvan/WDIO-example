@@ -2,10 +2,22 @@
   "name": "wdio-test",
   "version": "1.0.0",
   "description": "Simple WDIO example",
-  "dependencies": {
-    "webdriverio": "^4.0.6",
-    "wdio-junit-reporter": "0.0.2",
-    "wdio-sauce-service": "^0.2.2",
-    "wdio-jasmine-framework": "~0.1"
+  "scripts": {
+    "test": "gulp test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "cucumber": "^0.10.2",
+    "gulp": "^3.9.1",
+    "gulp-include": "^2.1.0",
+    "gulp-jasmine": "^2.3.0",
+    "gulp-jshint": "^2.0.1",
+    "gulp-webdriver": "^2.0.1",
+    "jshint": "^2.9.2",
+    "map-stream": "0.0.6",
+    "wdio-cucumber-framework": "0.0.6",
+    "wdio-cucumber-reporter": "0.0.2",
+    "wdio-selenium-standalone-service": "0.0.3",
+    "webdriverio": "^4.0.7"
   }
 }
